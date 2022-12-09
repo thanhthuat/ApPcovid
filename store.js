@@ -5,10 +5,10 @@ import appreducer from './src/redux/reducer/index';
 import rootSaga from './src/saga/index';
 
 const bindMiddleware = (middleware) => {
-  if (process.env.NODE_ENV !== 'production') {
-    const { composeWithDevTools } = require('redux-devtools-extension');
-    return composeWithDevTools(applyMiddleware(...middleware));
-  }
+//   if (process.env.NODE_ENV !== 'production') {
+//     const { composeWithDevTools } = require('redux-devtools-extension');
+//     return composeWithDevTools(applyMiddleware(...middleware));
+//   }
   return applyMiddleware(...middleware);
 };
 
